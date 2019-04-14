@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg">
+    <EditText
+        android:id="@+id/edt_ip"
+        android:layout_marginTop="20dp"
+        android:textColorLink="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:shadowColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:visibility="visible"
+        android:hint="Enter the home IP address" />
+
+    <Button
+        android:id="@+id/btn_ledOn"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect to Smart Lighting system"
+        android:onClick="buttonClick" />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/po"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/bout"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/g1"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/r1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:background="#ff9900"
+            android:layout_weight="0.5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="Room 1"
+                android:layout_marginLeft="10dp"
+                android:textSize="29dp"
+                android:id="@+id/te1"
+                android:textColor="#000000"
+                />
+            <Button
+                android:id="@+id/b1"
+                android:layout_below="@id/te1"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="Turn On"
+                android:onClick="ro1"/>
+
+            <ProgressBar
+                android:id="@+id/p1"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/b1"
+                android:layout_marginTop="20dp"
+                android:background="#FF0000"
+                android:max="4"
+                android:layout_marginLeft="5dp"
+                android:progress="2"
+                android:progressTint="#00FF00"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+
+            <Button
+                android:id="@+id/pl1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/p1"
+                android:background="@drawable/button_bg_round"
+                android:text="+"
+                android:textSize="18dp"
+                android:layout_marginBottom="30dp"
+                android:onClick="pp1"/>
+
+            <Button
+                android:id="@+id/ml1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/p1"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/pl1"
+                android:layout_marginTop="10dp"
+                android:onClick="mm1"
+                android:textSize="25dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/button_bg_round"
+                android:text="-" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/r2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:background="#ff9900"
+            android:layout_weight="0.5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="Room 2"
+                android:layout_marginLeft="10dp"
+                android:textSize="29dp"
+                android:id="@+id/te2"
+                android:textColor="#000000"
+                />
+            <Button
+                android:id="@+id/b2"
+                android:onClick="ro2"
+                android:text="Turn on"
+                android:layout_below="@id/te2"
+                android:layout_width="150dp"
+                android:layout_height="50dp" />
+
+            <ProgressBar
+                android:id="@+id/p2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/b2"
+                android:layout_marginTop="20dp"
+                android:background="#FF0000"
+                android:max="4"
+                android:layout_marginLeft="5dp"
+                android:progress="2"
+                android:progressTint="#00FF00"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+            <Button
+                android:id="@+id/pl2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/p2"
+                android:background="@drawable/button_bg_round"
+                android:text="+"
+                android:layout_marginBottom="30dp"
+                android:textSize="18dp"
+                android:onClick="pp2"/>
+
+            <Button
+                android:id="@+id/ml2"
+                android:onClick="mm2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/p2"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/pl2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:textSize="25dp"
+                android:background="@drawable/button_bg_round"
+                android:text="-" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/g2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/r3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"
+            android:background="#ff9900">
+
+            <TextView
+                android:id="@+id/te3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Room 3"
+                android:textColor="#000000"
+                android:textSize="29dp" />
+
+            <Button
+                android:id="@+id/b3"
+                android:text="Turn on"
+                android:onClick="ro3"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/te3" />
+
+            <ProgressBar
+                android:id="@+id/p3"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/b3"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:background="#FF0000"
+                android:max="4"
+                android:progress="2"
+                android:progressTint="#00FF00"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+            <Button
+                android:id="@+id/pl3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/p3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_bg_round"
+                android:text="+"
+                android:layout_marginBottom="30dp"
+                android:textSize="18dp"
+                android:onClick="pp3"/>
+
+            <Button
+                android:id="@+id/ml3"
+                android:layout_marginBottom="30dp"
+                android:textSize="25dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/p3"
+                android:onClick="mm3"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/pl3"
+
+                android:background="@drawable/button_bg_round"
+                android:text="-" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/r4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"
+            android:background="#ff9900">
+
+            <TextView
+                android:id="@+id/te4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Room 4"
+                android:textColor="#000000"
+                android:textSize="29dp" />
+
+            <Button
+                android:id="@+id/b4"
+                android:text="turn on"
+                android:onClick="ro4"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/te4" />
+
+            <ProgressBar
+                android:id="@+id/p4"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/b4"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:background="#FF0000"
+                android:max="4"
+                android:progress="2"
+                android:progressTint="#00FF00"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+
+            <Button
+                android:id="@+id/pl4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/p4"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_bg_round"
+                android:text="+"
+                android:textSize="18dp"
+                android:onClick="pp4"/>
+
+            <Button
+                android:id="@+id/ml4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/p4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/pl4"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/button_bg_round"
+                android:text="-"
+                android:textSize="25dp"
+                android:onClick="mm4"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="Turn All OFF"
+        android:layout_height="50dp"
+        android:onClick="allout"/>
+
+</LinearLayout>
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
